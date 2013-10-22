@@ -1,0 +1,30 @@
+h2{
+      text-align:center;
+      color:#060;
+}
+
+#menu, #get_file_details{
+	display: none;
+}
+
+.folder, .file{
+    font-family:sans;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.folder{
+	background: url('../img/folderBig.png') no-repeat 50% 0%;
+	margin:2px;
+	padding-top:35px;
+	margin-bottom: 5px;
+	text-align:center;
+}
+
+
+.file{
+	background: url('../img/fileBig.png') no-repeat 50% 0%;
+	margin:2px;
+	margin-bottom: 5px;
+	text-align:center;
+}

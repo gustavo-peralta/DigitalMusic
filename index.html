@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>DigitalNoiz</title>
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css" />
+        <link rel="stylesheet" href="css/style.css" />
+		<script src="js/jquery-1.10.2.js"></script>
+        <script src="js/jquery.mobile-1.3.2.js"></script>
+    </head>
+    
+    <body>
+        <div id="home" data-role="page">
+              <div data-role="header" data-position="fixed">
+                    <a id="backBtn" href="#" data-icon="arrow-l">Back</a>
+                    <h1>File Explorer</h1>
+                    <a id="homeBtn" href="index.html" data-icon="home" data-transition="pop">Home</a>
+              </div>
+              <div data-role="content">
+                    
+                    <h2>Folder</h2>
+        			
+                    <div class="ui-grid-c" id="dirContent">
+                        <div class="ui-block-a">
+                            <div class="folder"><p>folder name</p></div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div class="folder"><p>folder name</p></div>
+                        </div>
+                        <div class="ui-block-c">
+                            <div class="folder"><p>folder name</p></div>
+                        </div>
+                        <div class="ui-block-d">
+                            <div class="folder"><p>folder name</p></div>
+                        </div>
+                     next row
+                        <div class="ui-block-a">
+                            <div class="file"><p>file name</p></div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div class="file"><p>file name</p></div>
+                        </div>
+                        <div class="ui-block-c">
+                            <div class="file"><p>file name</p></div>
+                        </div>
+                        <div class="ui-block-d">
+                            <div class="file"><p>file name</p></div>
+                        </div>
+                    </div>
+                   
+                    <div id="btnPlay">
+                    	 <input type="button" value="Play" />
+                    </div>
+					
+                    <!-- DIALOGS -->
+                    <a id="menu" href="#menuOptions" data-rel="dialog">file details</a>
+                    <a id="get_file_details" href="#fileDetails" data-rel="dialog">file details</a>
+                    <!-- DIALOGS -->                    
+              </div>
+        </div>
+       
+       
+        <div id="menuOptions" data-role="page">
+            <div data-role="header">
+                    <h1>Choose</h1>
+              </div>
+              <div data-role="content">
+                <input type="button" id="openBtn" data-theme="e" value="Open">
+                <input type="button" id="copyBtn" value="Copy">
+                <input type="button" id="moveBtn" value="Move">
+                <input type="button" id="pasteBtn" value="Paste" disabled>
+                <input type="button" id="deleteBtn" value="Delete">
+              </div>
+        </div>
+        
+        <div id="fileDetails" data-role="page">
+            <div data-role="header">
+                    <h1>File</h1>
+              </div>
+              <div id="file_details" data-role="content"></div>
+        </div>
+        
+    <!-- Phonegap setup -->
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+      
+    <script type="text/javascript" src="js/scripts2.js"></script>   
+    <script type="text/javascript">
+		app.initialize();
+    </script>
+    </body>
+</html>
